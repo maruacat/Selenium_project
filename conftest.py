@@ -1,6 +1,9 @@
 import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.options import Options
+import time 
+
 
 @pytest.fixture(scope="function")
 def browser():
@@ -10,5 +13,6 @@ def browser():
     print("\nquit browser..")
     browser.quit()
 
-def pytest_addoption(parser):
-    parser.addoption('--language', action='store', default= None)
+
+
+
